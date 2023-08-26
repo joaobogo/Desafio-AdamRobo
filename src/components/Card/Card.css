@@ -1,36 +1,49 @@
-.card{
+.card {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: center;
-    align-item: center;
+    align-items: center; 
     border: solid 1px grey;
     border-radius: 5%;
-    width: 30%;
+    width: 20%;
     margin-top: 5%;
-    
 }
 
-h3{
+
+h3 {
     font-family: "Arial";
-    text-align:center;
+    text-align: center;
     font-size: 16px;
 }
 
-img{
+img {
     width: 50%;
-    margin-right:25%;
+    margin-right: 25%;
     margin-left: 25%;
 }
 
-p{
+p {
     font-family: "Arial";
-    text-align:center;
+    text-align: center;
     font-size: 14px;
 }
 
-span{
+span {
     font-family: "Arial";
-    text-align:center;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 40%; 
+    }
+
+    img {
+        width: 70%; 
+        margin-right: 15%;
+        margin-left: 15%;
+    }
 }

@@ -23,7 +23,7 @@ function Card({ item }: CardProps): JSX.Element {
     return title;
   };
 
-  
+  console.log(item)
   return (
     <div className="card">
       <h3>{editTitle(title)}</h3>
