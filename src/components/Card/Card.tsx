@@ -15,6 +15,7 @@ interface CardProps {
 }
 
 function Card({ item }: CardProps): JSX.Element {
+  
   const { id, title, available_quantity, thumbnail, price } = item;
   const [clicked, setClicked] = useState<boolean>(false);
   

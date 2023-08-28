@@ -6,7 +6,6 @@ import "./Home.css";
 
 
 
-
 function Home() {
   const [products, setProducts] = useState<IProduct[]>([]);
   
