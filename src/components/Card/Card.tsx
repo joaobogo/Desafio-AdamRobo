@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useContext } from "react";
 import "./Card.css";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 
 interface CardProps {
@@ -15,26 +16,40 @@ interface CardProps {
 
 function Card({ item }: CardProps): JSX.Element {
   const { id, title, available_quantity, thumbnail, price } = item;
+  const [clicked, setClicked] = useState<boolean>(false);
+  
 
   const editTitle = (title: string): string => {
     if (title.length > 40) {
-      return title.slice(0, 30) + "...";
+      return title.slice(0, 25) + "...";
     }
     return title;
   };
 
-  console.log(item)
+  const formatPrice = (price: number): string => {
+    const cents = String(Math.round(price * 100));
+    const integer = cents.slice(0, -2);
+    const decimal = cents.slice(-2);
+    return `R$${integer},${decimal}`;
+  };
+
+  const handleClick = () => {
+    setClicked(true);
+  };
+
   return (
     <div className="card">
-      <h3>{editTitle(title)}</h3>
       <img alt={title} src={thumbnail} />
+      <h3>{editTitle(title)}</h3>
       <p>
         Quantidade disponível: <span>{available_quantity}</span>
       </p>
       <p>
-       <span>R${price}</span>
+        <span>{formatPrice(price)}</span>
       </p>
-      
+      <Button fontSize="14px" colorScheme="blue" onClick={handleClick}>
+        {clicked ? "Item no Carrinho" : "Adicionar ao Carrinho"}
+      </Button>
     </div>
   );
 }

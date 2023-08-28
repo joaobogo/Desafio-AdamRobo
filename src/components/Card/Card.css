@@ -1,49 +1,64 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; 
-    border: solid 1px grey;
-    border-radius: 5%;
-    width: 20%;
-    margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px grey;
+  border-radius: 5%;
+  width: 22%;
+  margin-top: 5%;
+  height: 18rem;
+  -webkit-box-shadow: 2px -5px 24px 4px rgba(189, 176, 189, 1);
+  -moz-box-shadow: 2px -5px 24px 4px rgba(189, 176, 189, 1);
+  box-shadow: 2px -5px 24px 4px rgba(189, 176, 189, 1);
+  font-family: "Times New Roman";
 }
 
-
 h3 {
-    font-family: "Arial";
-    text-align: center;
-    font-size: 16px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 img {
-    width: 50%;
-    margin-right: 25%;
-    margin-left: 25%;
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 p {
-    font-family: "Arial";
-    text-align: center;
-    font-size: 14px;
+  text-align: center;
+  font-size: 14px;
 }
 
 span {
-    font-family: "Arial";
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 
+Button {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
 @media screen and (max-width: 768px) {
-    .card {
-        width: 40%; 
-    }
+  .card {
+    width: 45%;
+    padding: 2%;
+  }
 
-    img {
-        width: 70%; 
-        margin-right: 15%;
-        margin-left: 15%;
-    }
+  Button {
+    width: 100%;
+   
+    padding: 2%;
+  }
+
+  img {
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-bottom: 5%;
+  }
 }

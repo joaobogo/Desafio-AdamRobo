@@ -5,7 +5,6 @@
   width: 100%;
   height: 30vh;
   z-index: 100;
-
   background: rgb(255, 255, 255);
   background: linear-gradient(
     0deg,
@@ -23,43 +22,61 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+}
 
-  .wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    .letter {
-      transition: ease-out 1s;
-      transform: translateY(40%);
-    }
-    .shadow {
-      transform: scale(1, -1);
-      color: #999;
-      transition: ease-in 5s, ease-out 5s;
-    }
-    &:hover {
-      .letter {
-        transform: translateY(-15%);
-      }
-      .shadow {
-        opacity: 0;
-        transform: translateY(15%);
-      }
-    }
-  }
+.text .wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.text .wrapper .letter {
+  transition: ease-out 1s;
+  transform: translateY(40%);
+}
+
+.text .wrapper .shadow {
+  transform: scale(1, -1);
+  color: #999;
+  transition: ease-in 5s, ease-out 5s;
+}
+
+.text .wrapper:hover .letter {
+  transform: translateY(-15%);
+}
+
+.text .wrapper:hover .shadow {
+  opacity: 0;
+  transform: translateY(15%);
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content:center;
 }
 
 .search {
   display: flex;
-  gap: 5%;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top:2%;
+  gap:5px;
 }
 
+.button{
+  width: 25%;
+  margin:0;
+}
+
+
+
+h2 {
+  font-weight: bold;
+  font-style: italic;
+}
 
 @media screen and (max-width: 768px) {
   .overlay {
@@ -67,12 +84,53 @@ form {
   }
 
   .text {
-    font-size: 60px; 
+    font-size: 60px;
   }
+
+  .text .wrapper .letter {
+    transform: translateY(20%);
+  }
+
   
-  .wrapper {
-    .letter {
-      transform: translateY(20%); 
-    }
+ .search{
+  width:80%;
+ }
+
+  h2{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .overlay {
+    height: 10vh;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .text .wrapper .letter {
+    transform: translateY(10%);
+  }
+
+  .text .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .overlay {
+    height: 5vh;
+  }
+
+  .text {
+    font-size: 30px;
+  }
+
+  .text .wrapper .letter {
+    transform: translateY(5%);
   }
 }
